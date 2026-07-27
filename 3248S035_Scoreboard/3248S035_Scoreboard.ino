@@ -14,7 +14,7 @@ Page currentPage = PAGE_START;
 // Call whenever currentPage changes — redraws the active screen
 void renderPage() {
   switch (currentPage) {
-    case PAGE_START:    drawPageStart(currentSettings);    break;
+    case PAGE_START:    drawPageStart();    break;
     case PAGE_SETTINGS: drawPageSettings(); break;
     case PAGE_GAME:     drawPageGame();     break;
   }

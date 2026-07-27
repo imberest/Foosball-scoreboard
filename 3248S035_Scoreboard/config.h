@@ -70,6 +70,10 @@ struct GameSettings {
   bool         remember;
 };
 
+// Global game settings
+extern GameSettings currentSettings;
+extern Page currentPage;
+
 // ─── Defaults ────────────────────────────────────────
 #define DEFAULT_MODE    MODE_SINGLE
 #define DEFAULT_POINTS  POINTS_7

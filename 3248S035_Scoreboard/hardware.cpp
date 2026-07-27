@@ -68,7 +68,7 @@ const unsigned long touchDebounceMs = 250;
 void touchSetup() {
   Wire.begin(TOUCH_SDA, TOUCH_SCL);  // Start I2C on defined pins
   tp.begin();                         // Initialise GT911 touch controller
-  tp.setRotation(3);    // Match display orientation
+  tp.setRotation(2);    // Match display orientation
 }
 
 bool touchRead(int &x, int &y) {
@@ -77,8 +77,8 @@ bool touchRead(int &x, int &y) {
     unsigned long now = millis();
     if (now - lastTouchTime > touchDebounceMs) {
       lastTouchTime = now;
-      uint16_t tx = tp.points[0].x;
-      uint16_t ty = tp.points[0].y;
+      uint16_t tx = SCREEN_W - tp.points[0].x;
+      uint16_t ty = SCREEN_H - tp.points[0].y;
       #if DEBUG_TOUCH
         Serial.print("[TOUCH] raw x=");
         Serial.print(tx);

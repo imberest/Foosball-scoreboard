@@ -6,10 +6,8 @@
 #include "page_settings.h"
 #include "page_game.h"
 
-extern Page currentPage;
-
-void drawPageStart(GameSettings& settings);
+void drawPageStart();
 void drawStartBtn();
 void drawSettingsBtn();
-void drawStartPanel(GameSettings& settings);
+void drawStartPanel();
 void handleTouchStart(uint16_t tx, uint16_t ty);

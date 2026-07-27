@@ -11,8 +11,6 @@
 #include "page_settings.h"   // handleTouchSettings
 #include "page_game.h"       // handleTouchGame
 
-extern Page currentPage;     // currentPage visible in hardware.cpp
-
 // ── Shared Hardware Objects ───────────────────────────────────────────────────
 // Defined once in hardware.cpp — declared here so any file that includes
 // hardware.h can access tft and tp directly

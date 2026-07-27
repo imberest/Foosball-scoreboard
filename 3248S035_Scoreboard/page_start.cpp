@@ -43,7 +43,7 @@ void drawSettingsBtn() {
   }
 
 // ── Settings Panel ────────────────────────────────────────
-void drawStartPanel(GameSettings& settings) {
+void drawStartPanel() {
   // Panel border
   tft.drawRoundRect(PANEL_X, PANEL_Y, PANEL_W, PANEL_H, 10, TFT_YELLOW);
 
@@ -68,15 +68,15 @@ void drawStartPanel(GameSettings& settings) {
 
   tft.setCursor(PANEL_X + 10, PANEL_Y + 35);
   tft.print("Mode: ");
-  tft.print(modeToString(settings.mode));
+  tft.print(modeToString(currentSettings.mode));
 
   tft.setCursor(PANEL_X + 10, PANEL_Y + 70);
   tft.print("Points: ");
-  tft.print(settings.points);
+  tft.print(currentSettings.points);
 }
 
 // ── Full Page ─────────────────────────────────────────────
-void drawPageStart(GameSettings& settings) {   // ← add parameter
+void drawPageStart() {   // ← add parameter
   tft.fillScreen(TFT_BLACK);
 
   // ── Title — centered top ──────────────────────────────
@@ -95,7 +95,7 @@ void drawPageStart(GameSettings& settings) {   // ← add parameter
 
   drawStartBtn();
   drawSettingsBtn();
-  drawStartPanel(settings);   // ← pass it down
+  drawStartPanel();   // ← pass it down
 }
 
 void handleTouchStart(uint16_t tx, uint16_t ty) {
