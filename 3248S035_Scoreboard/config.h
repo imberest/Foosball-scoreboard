@@ -58,7 +58,7 @@ enum GameMode {
 enum PointsTarget {
   POINTS_5  = 5,
   POINTS_7  = 7,
-  POINTS_10 = 10
+  POINTS_9 = 9
 };
 
 // ─────────────────────────────────────────
@@ -75,6 +75,6 @@ extern GameSettings currentSettings;
 extern Page currentPage;
 
 // ─── Defaults ────────────────────────────────────────
-#define DEFAULT_MODE    MODE_SINGLE
+#define DEFAULT_MODE    MODE_BEST_OF_3
 #define DEFAULT_POINTS  POINTS_7
 #define DEFAULT_REMEMBER false       // default to not remembering
