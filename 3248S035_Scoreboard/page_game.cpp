@@ -36,5 +36,9 @@ void handleTouchGame(uint16_t tx, uint16_t ty){
 
 void drawPageGame() {
   tft.fillScreen(TFT_BLACK); // Clear screen to black on startup
+  tft.setTextFont(2);
+  tft.setTextSize(2);
+  tft.setTextColor(TFT_ORANGE, TFT_BLACK);
+  tft.drawString("GAME PAGE", 240, 45);
   drawGameBackBtn();
 }
