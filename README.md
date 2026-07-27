@@ -79,6 +79,20 @@ project/
 
 ### TFT_eSPI
 
+You can add TFT_eSPI_Setups folder next to your libraries, then in 
+`User_Setup_Select.h`
+Add line:
+///////////////////////////////////////////////////////
+//   User configuration selection lines are below    //
+///////////////////////////////////////////////////////
+
+// Only ONE line below should be uncommented to define your setup.  Add extra lines and files as needed.
+
+#include <../TFT_eSPI_setups/3248S035.h>
+
+//#include <User_Setup.h>           // Default setup is root library folder
+
+
 In your `User_Setup.h` (inside the TFT_eSPI library folder):
 
 ```cpp
